@@ -247,12 +247,12 @@ header ul li a:hover {
     background-image: url(../images/ramadan.jpg);
     position: absolute;
     top: 100px;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     width: 100%;
     z-index: 4;
-    height: 50%;
-    background-size: cover;
-    background-position: center;
+    height: 100%;
+    background-size: contain;
+    /* background-position: center; */
     background-repeat: no-repeat;
 }
 .landing .text {
@@ -344,6 +344,7 @@ header ul li a:hover {
     width: 100%;
     transition: var(--main-duration);
     bottom: 100%;
+    border-radius: 50% 0;
 }
 .products .products-content .card:hover .info {
     bottom: 0;
@@ -373,6 +374,7 @@ header ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 @media (max-width: 767px) {
     .about .container .about-content {
@@ -404,43 +406,29 @@ header ul li a:hover {
     margin-bottom: 80px;
     }
 }
-.about .container .about-content .about-img::before {
-    content: "";
-    position: absolute;
-    background-color: var(--main-color);
-    width: 100px;
-    height: calc(100% + 80px);
-    top: -40px;
-    left: -50px;
-    z-index: -1;
-}
+/* .about .container .about-content .about-img::before,
 .about .container .about-content .about-img::after {
     content: "";
     position: absolute;
-    background-color: var(--secondary-color);
-    width: 100px;
+    width: 80px;
     height: calc(100% + 80px);
     top: -40px;
-    right: -50px;
     z-index: -1;
+    border-radius: 50%;
 }
-@media (max-width: 767px) {
-    .about .container .about-content .about-img::after {
-        width: 60px;
-        right: -30px;
-        height: calc(100% + 40px);
-        top: -20px;
-    }
-    .about .container .about-content .about-img::before {
-        width: 60px;
-        left: -30px;
-        height: calc(100% + 40px);
-        top: -20px;
-    }
+.about .container .about-content .about-img::before {
+    background-color: var(--main-color);
+    left: -30px;
+
 }
+.about .container .about-content .about-img::after {
+    background-color: var(--secondary-color);
+    right: -30px;
+} */
+
 .about .container .about-content .about-img img {
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 40px 10px;
 }
 .about .container .about-content .text {
     flex-basis: calc(100% - 500px);
@@ -474,8 +462,16 @@ header ul li a:hover {
     min-width: 300px;
     min-height: 300px;
     padding: 20px;
+    background-color: white;
+    transition: var(--main-duration);
+    position: relative;
+    border-radius: 40px 10px;
 }
-
+.contact .contact-content .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: -4px;
+    left: -6px;
+}
 @media (max-width: 991px),
  (max-width: 767px) {
     .contact .contact-content {
@@ -487,7 +483,7 @@ header ul li a:hover {
     }
 }
 .contact .contact-content .card > i {
-    color: var(--secondary-color);
+    color: var(--main-color);
     padding: 30px;
     font-size: 30px;
 }
@@ -495,19 +491,18 @@ header ul li a:hover {
     display: block;
     padding-bottom: 20px;
     font-weight: bold;
-
+    font-size: 20px;
 }
 .contact .contact-content .card address {
     margin-bottom: 30px;
+    font-size: 20px;
 }
-.social-icons i {
-    margin: 15px;
-    color: var(--main-color);
-    font-size: 25px;
+.contact .social-icons i {
+    margin: 25px;
+    color: var(--secondary-color);
+    font-size: 35px;
 }
-/* .contact .contact-content .card address {
-    padding-bottom: 20px;
-} */
+
 /* end contact  */
 
 /* start footer  */
